@@ -36,7 +36,7 @@ public class StudentRepo {
 
   public Student getStudent(int id){
     try{
-      PreparedStatement psts = conn.prepareStatement("select * from kea.student1 where id = ?");
+      PreparedStatement psts = conn.prepareStatement("select * from kea.student1 where id1 = ?");
       psts.setInt(1, id);
       ResultSet rSet = psts.executeQuery();
     }catch (SQLException e){

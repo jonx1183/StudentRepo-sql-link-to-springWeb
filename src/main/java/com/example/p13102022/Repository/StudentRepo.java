@@ -46,4 +46,18 @@ public class StudentRepo {
     }
     return null;
   }
+
+  public void createStudent(Student student){
+    try {
+      PreparedStatement psts = conn.prepareStatement("insert into kea.student1 (name1, email, gender) VALUES (?,?,?)");
+      psts.setString(1,student.getName());
+      psts.setString(2, student.getEmail());
+      psts.setBoolean(3, student.isGender());
+      psts.executeUpdate();
+    }catch (SQLException e){
+      System.out.println("Error at createStudent");
+      e.printStackTrace();
+    }
+
+  }
 }

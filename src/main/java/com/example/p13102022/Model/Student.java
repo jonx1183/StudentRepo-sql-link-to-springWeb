@@ -1,31 +1,31 @@
 package com.example.p13102022.Model;
 
 public class Student {
-  private int id;
-  private String name;
+  private int id1;
+  private String name1;
   private String email;
   private boolean gender;
 
   public Student(int id, String name, String email, boolean gender){
-    this.id = id;
-    this.name =name;
+    this.id1 = id;
+    this.name1 =name;
     this.email =email;
     this.gender =gender;
 
   }
 
   public Student(String name, String email, boolean gender){
-    this.name =name;
+    this.name1 =name;
     this.email =email;
     this.gender =gender;
   }
 
-  public int getId() {
-    return id;
+  public int getId1() {
+    return id1;
   }
 
-  public String getName() {
-    return name;
+  public String getName1() {
+    return name1;
   }
 
   public String getEmail() {
@@ -36,12 +36,12 @@ public class Student {
     return gender;
   }
 
-  public void setId(int id) {
-    this.id = id;
+  public void setId1(int id1) {
+    this.id1 = id1;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setName1(String name1) {
+    this.name1 = name1;
   }
 
   public void setEmail(String email) {
@@ -55,8 +55,8 @@ public class Student {
   @Override
   public String toString() {
     return "Student{" +
-        "id=" + id +
-        ", name='" + name + '\'' +
+        "id=" + id1 +
+        ", name='" + name1 + '\'' +
         ", email='" + email + '\'' +
         ", gender=" + gender +
         '}';

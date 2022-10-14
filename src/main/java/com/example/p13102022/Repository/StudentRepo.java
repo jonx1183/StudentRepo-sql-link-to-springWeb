@@ -21,8 +21,8 @@ public class StudentRepo {
 
       while (rSet.next()){
         students.add(new Student(
-            rSet.getInt("id"),
-            rSet.getString("name"),
+            rSet.getInt("id1"),
+            rSet.getString("name1"),
             rSet.getString("email"),
             rSet.getBoolean("gender")));
       }
@@ -50,7 +50,7 @@ public class StudentRepo {
   public void createStudent(Student student){
     try {
       PreparedStatement psts = conn.prepareStatement("insert into kea.student1 (name1, email, gender) VALUES (?,?,?)");
-      psts.setString(1,student.getName());
+      psts.setString(1,student.getName1());
       psts.setString(2, student.getEmail());
       psts.setBoolean(3, student.isGender());
       psts.executeUpdate();
